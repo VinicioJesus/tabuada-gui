@@ -17,7 +17,7 @@ public class Tabuada {
 		this.multiplicando = multiplicando;
 	}
 	
-	public double getMultiplicador() {
+	public int getMultiplicador() {
 		return multiplicador;
 	}
 	
@@ -31,8 +31,9 @@ public class Tabuada {
 		String t[] = new String[multiplicador + 1];
 		
 		for (int i = 0; i <= multiplicador; i++) {
+			
 			int produto = multiplicando * i;
-			t[i] = multiplicando + " X " + " = " + i + produto;
+			t[i] = multiplicando + " X " + i + " = " + produto;
 		}
 		// quem chamar o calcular vai receber como resposta o Return t
 		return t;

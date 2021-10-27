@@ -14,7 +14,7 @@ public class TabuadaApp {
 		String tabuadaX[] = x.calcular();
 		
 		for (int i = 0; i < tabuadaX.length; i++) {			
-			System.out.println(tabuadaX[2]);
+			System.out.println(tabuadaX[i]);
 		}
 		
 
