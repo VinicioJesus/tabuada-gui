@@ -1,15 +1,19 @@
 package br.senai.sp.jandira.model;
 
+import java.util.Scanner;
+
 public class Tabuada {
 	
-	private double multiplicando;
-	private double multiplicador;
+	private int multiplicando;
+	private int multiplicador;
 	
-	public double getMultiplicando() {
+	Scanner leitor = new Scanner (System.in);
+	
+	public int getMultiplicando() {
 		return multiplicando;
 	}
 	
-	public void setMultiplicando(double multiplicando) {
+	public void setMultiplicando(int multiplicando) {
 		this.multiplicando = multiplicando;
 	}
 	
@@ -17,10 +21,22 @@ public class Tabuada {
 		return multiplicador;
 	}
 	
-	public void setMultiplicador(double multiplicador) {
+	public void setMultiplicador(int multiplicador) {
 		this.multiplicador = multiplicador;
 	}
 	
+	//criando um Vetor/Array, matriz da tabuada.
+	public String[] calcular() {
+		
+		String t[] = new String[multiplicador + 1];
+		
+		for (int i = 0; i <= multiplicador; i++) {
+			int produto = multiplicando * i;
+			t[i] = multiplicando + " X " + " = " + i + produto;
+		}
+		// quem chamar o calcular vai receber como resposta o Return t
+		return t;
+	}
 	
 	
 }
