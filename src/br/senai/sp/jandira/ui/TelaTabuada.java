@@ -82,10 +82,7 @@ public class TelaTabuada {
 		btnLimpar.setBackground(Color.RED);
 		btnLimpar.setForeground(Color.WHITE);
 		btnLimpar.setFont(botoes);
-		panelFormulario.add(btnLimpar);
-		
-		
-		
+		panelFormulario.add(btnLimpar);		
 
 		// JList
 
@@ -108,12 +105,14 @@ public class TelaTabuada {
 			public void actionPerformed(ActionEvent e) {
 				Tabuada tabuada = new Tabuada();
 				
+				int multiplicando = Integer.parseInt(txtMultiplicando);
+				int multiplicador = Integer.parseInt(txtMultiplicador);
 				
 				
+				tabuada.setMultiplicador(multiplicador);
+				tabuada.setMultiplicando(multiplicador);
 				
-				
-				
-				String resultadoTabuada[] = tabuada.calcular();
+				String[] resultadoTabuada = tabuada.calcular();
 
 				for (int i = 0; i < resultadoTabuada.length; i++) {
 					
