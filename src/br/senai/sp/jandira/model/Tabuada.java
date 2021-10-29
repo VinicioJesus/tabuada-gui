@@ -28,15 +28,15 @@ public class Tabuada {
 	//criando um Vetor/Array, matriz da tabuada.
 	public String[] calcular() {
 		
-		String t[] = new String[multiplicador + 1];
+		String tabuada[] = new String[multiplicador + 1];
 		
-		for (int i = 0; i <= multiplicador; i++) {
+		for (int index = 0; index <= multiplicador; index++) {
 			
-			int produto = multiplicando * i;
-			t[i] = multiplicando + " X " + i + " = " + produto;
+			int produto = multiplicando * index;
+			tabuada[index] = multiplicando + " X " + index + " = " + produto;
 		}
 		// quem chamar o calcular vai receber como resposta o Return t
-		return t;
+		return tabuada;
 	}
 	
 	
