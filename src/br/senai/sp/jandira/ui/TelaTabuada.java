@@ -94,22 +94,22 @@ public class TelaTabuada {
 		JScrollPane scroll = new JScrollPane();
 		scroll.setBounds(360, 150, 200, 300);
 
-		JList listTabuada = new JList();
+		JList<String> listTabuada = new JList<String>();
 		scroll.getViewport().add(listTabuada);
 
-		DefaultListModel tabuadaModel = new DefaultListModel();
+		DefaultListModel<String> tabuadaModel = new DefaultListModel<String>();
 
 		btnCalcular.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
+				int multiplicando = Integer.parseInt(txtMultiplicando.getText());
+				int multiplicador = Integer.parseInt(txtMultiplicador.getText());
+				
 				Tabuada tabuada = new Tabuada();
-				
-				int multiplicando = Integer.parseInt(txtMultiplicando);
-				int multiplicador = Integer.parseInt(txtMultiplicador);
-				
-				
-				tabuada.setMultiplicador(multiplicador);
+					
+				tabuada.setMultiplicador(multiplicando);
 				tabuada.setMultiplicando(multiplicador);
 				
 				String[] resultadoTabuada = tabuada.calcular();
@@ -128,8 +128,8 @@ public class TelaTabuada {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				txtMultiplicando.setText("");
-				txtMultiplicador.setText("");
+				txtMultiplicando.setText(null);
+				txtMultiplicador.setText(null);
 				
 				txtMultiplicando.requestFocus();
 				
